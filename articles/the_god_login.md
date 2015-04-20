@@ -179,11 +179,7 @@ Nếu có người quên mật khẩu của mình và cố gắng đăng nhập 
 
 ![](http://blog.codinghorror.com/content/images/2015/01/too-many-failed-log-in-attempts.png)
 
-You can do fancy stuff like temporarily disable accounts or start showing a CAPTCHA if there are too many failed login attempts, but this can easily become a griefing vector, so be careful.
-
 Bạn có thể dùng vài kĩ thuật "lạ mắt" như tạm khóa tài khoản hay cho hiển thị CAPTCHA nếu có quá nhiều lần đăng nhập thất bại, nhưng việc này có thể dễ dàng khiến người dùng bực bội, khó chịu, vì thế hãy suy xét khi áp dụng.
-
-I think a nice middle ground is to insert standard pauses of moderately increasing size after repeated sequential failures or repeated sequential forgot password requests from the same IP address. So that's what we do.
 
 Tôi suy nghĩ về một giải pháp đẹp và trung dung hơn; đó là thêm vào khoảng dừng giữa các lần thực hiện cùng một hành động, tăng thời gian dừng này lên theo số lần đăng nhập thất bại hay yêu cầu quên mật khẩu từ cùng 1 địa chỉ IP. Kĩ thuật này cũng đã được áp dụng vào Discourse.
 
